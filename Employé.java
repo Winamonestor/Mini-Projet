@@ -1,5 +1,5 @@
 
-public class Employé {
+public class EmployÃ© {
 public static void main(String[] args) {
     
         
@@ -32,7 +32,7 @@ this.date = date;
 public abstract double calculerSalaire();
 public String getTitre()
 {
-return "L'employé " ;
+return "L'employÃ© " ;
 }
 public String getNom() {
 return getTitre() + prenom + " " + nom;
@@ -40,7 +40,7 @@ return getTitre() + prenom + " " + nom;
 } 
 
 /* **********************************************************************
-*  La classe Commercial (regroupe Vendeur et Représentant)
+*  La classe Commercial (regroupe Vendeur et ReprÃ©sentant)
 * **********************************************************************/
 abstract class Commercial extends Employe {
 private double chiffreAffaire;
@@ -77,7 +77,7 @@ return "Le vendeur ";
 
 
 /* **********************************************************************
-*  La classe Représentant
+*  La classe ReprÃ©sentant
 * **********************************************************************/
 class Representant extends Commercial {
 private final static double POURCENT_REPRESENTANT = 0.2;
@@ -90,7 +90,7 @@ return (POURCENT_REPRESENTANT * getChiffreAffaire()) + BONUS_REPRESENTANT;
 }
 public String getTitre()
 {
-return "Le représentant ";
+return "Le reprÃ©sentant ";
 }
 }
 
@@ -140,7 +140,7 @@ return "Le manut. " ;
 
 
 /* **********************************************************************
-*  L'interface d'employés à risque
+*  L'interface d'employÃ©s Ã  risque
 * **********************************************************************/
 interface ARisque {
 int PRIME = 25000;
@@ -149,7 +149,7 @@ int PRIME = 25000;
 
 
 /* **********************************************************************
-*  Une première sous-classe d'employé à risque
+*  Une premiÃ¨re sous-classe d'employÃ© Ã  risque
 * **********************************************************************/
 class TechnARisque extends Technicien implements ARisque {
 public TechnARisque(String prenom, String nom, int age, String date, int unites) {
@@ -163,7 +163,7 @@ return super.calculerSalaire() + PRIME;
 
 
 /* **********************************************************************
-*  Une autre sous-classe d'employé à risque
+*  Une autre sous-classe d'employÃ© Ã  risque
 * **********************************************************************/
 class ManutARisque extends Manutentionnaire implements ARisque {
 public ManutARisque(String prenom, String nom, int age, String date, int heures) {
@@ -189,7 +189,7 @@ public void ajouterEmploye(Employe e) {
 if (nbreEmploye <= MAXEMPLOYE) {
 staff[nbreEmploye - 1] = e;
 } else {
-System.out.println("Pas plus de " + MAXEMPLOYE + " employés");
+System.out.println("Pas plus de " + MAXEMPLOYE + " employÃ©s");
 }
 }
 public double salaireMoyen() {
